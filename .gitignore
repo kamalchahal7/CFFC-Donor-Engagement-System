@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+env/
+
+# Node / React
+node_modules/
+build/
+dist/
+.next/
+
+# IDE
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets (CRITICAL — never commit API keys)
+.env
+.env.local
+.env.production
