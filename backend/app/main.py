@@ -14,5 +14,16 @@ def emailer(receiver_email: str, subject: str, content: str):
     else:
         return {"message": "Email failed to send."}
 
+@app.post("/send_newsletter")
+def newsletter(receiver_email: str):
+    subject = "Our latest newsletter"
+    with open("app/templates/newsletter.html", "r") as file:
+        content = file.read()
+    result = send_email(receiver_email, subject, content)
+    if result:
+        return {"message": "Newsletter sent successfully!"}
+    else:
+        return {"message": "Newsletter failed to send."}
+
     
     
