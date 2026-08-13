@@ -23,5 +23,6 @@ def send_email(receiver_email: str, subject: str, content: str):
         print(response.body)
         print(response.headers)
     except Exception as e:
-        print(e.message)
+        print(e)
+        print(e.body if hasattr(e, 'body') else "No body")
         return None
