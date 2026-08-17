@@ -1,25 +1,30 @@
 function App() {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50 font-sans">
       {/* Hero Section */}
-      <section className="bg-blue-900 text-white text-center py-10 px- relative">
-        <h1 className="text-3xl font-bold text-black-600 text-center py-4">
-          CFFC Donation Page
+      <section className="bg-[#0f2b4c] text-white text-center py-20 px-4 relative">
+        <img 
+            src="https://raw.githubusercontent.com/kamalchahal7/CFFC-Donor-Engagement-System/main/backend/app/templates/logo.png" 
+            alt="Canadian Food for Children" 
+            className = "w-60 md:w-80 mx-auto"
+          />
+        <h1 className="text-5xl font-bold text-black-600 text-center py-4">
+          Donation Page
         </h1>
         <h3 className="text-xl font-medium text-gray-300 py-1 text-center mb-7 md:mb-0">
           Feeding the poorest of the poor in developing countries since 1983
         </h3>
-        <a href="https://https://www.canadahelps.org/en/dn/4714" 
+        <a href="https://www.canadahelps.org/en/dn/4714" 
            className="relative md:absolute md:right-10 md:top-1/2 md:-translate-y-1/2 mt-4 md:mt-0 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300"
         >Donate Now
         </a>
       </section>
       {/* Impact Section */}
-      <section>
+      <section className="bg-white shadow-md rounded-lg max-w-4xl mx-auto -mt-8 py-12 px-8">
         <h3 className="text-xl font-medium py-1 text-center">
           Over the last decade, we have delivered roughly:
         </h3>
-        <div className=" flex justify-center gap-8">
+        <div className=" flex justify-center gap-6">
           <div className="text-center">
             <p className="text-4xl font-bold">2,800+</p>
             <p className="text-gray-500">Shipments</p>
@@ -34,10 +39,13 @@ function App() {
           </div>
         </div>
         <h3 className="text-xl font-light py-1 text-center">
-          These shipments would not be possible without our generous donors as:
+          Consisting of food, clothing, medical supplies, educational materials, and household goods
         </h3>
-        <h3 className="text-xl font-medium py-1 text-center">
-          97% of our donations go directly towards shipments with the remaining funding administrative costs.
+        {/* <h3 className="text-xl font-light py-1 text-center">
+          These shipments would not be possible without our generous donors as:
+        </h3> */}
+        <h3 className="text-xl font-medium text-green-600 font-bold py-1 text-center">
+          97% of our monetary donations go directly towards our shipments with the remaining 3% funding administrative costs.
         </h3>
         {/* Change below to a interactive pie chart */}
         {/* <p className="text-xl font-medium py-1 text-center">
@@ -59,28 +67,43 @@ function App() {
         </div> */}
       </section>
         
-      <section className="flex flex-col md:flex-row gap-8 px-8 py-6 md:py-10">
+      <section className="flex flex-col md:flex-row gap-8 px-8 py-6 md:py-10 max-w-6xl mx-auto">
         <div className="flex-1">
-          {/* What's Needed Section */}
           <h3 className="text-xl font-medium py-1 text-center">
             We are currently in need of the following items:
           </h3>
-          <h3 className="text-xl font-medium py-1 text-center">
-            Stuff we always need:
-          </h3>
-          <p className="py-1 text-center">Cooking Oil</p>
-          <p className="py-1 text-center">Table Salt</p>
-          <p className="py-1 text-center">Beans</p>
-          <p className="py-1 text-center">Canned Tomatoes</p>
-          <p className="py-1 text-center">Rice</p>
-          <h3 className="text-xl font-medium py-1 text-center">
-            Urgent items needed now:
-          </h3>
-          <p className="py-1 text-center">Fishing Equipment</p>
-          <p className="py-1 text-center">Blankets</p>
-          <p className="py-1 text-center">Hoodies</p>
-          <p className="py-1 text-center">Books</p>
-          <p className="py-1 text-center">Electronics</p>
+          {/* What's Needed Section */}
+          <div className="bg-white shadow-md rounded-lg p-6 mt-4">
+            {/* <h3 className="text-lg font-bold text-center mb-3">
+              Stuff we always need:
+            </h3> */}
+            <h3 className="text-lg font-bold text-center mb-3">
+              Always Need
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              <span className="bg-gray-100 px-4 py-2 rounded-full">Cooking Oil</span>
+              <span className="bg-gray-100 px-4 py-2 rounded-full">Table Salt</span>
+              <span className="bg-gray-100 px-4 py-2 rounded-full">Beans</span>
+              <span className="bg-gray-100 px-4 py-2 rounded-full">Canned Tomatoes</span>
+              <span className="bg-gray-100 px-4 py-2 rounded-full">Rice</span>
+            </div>
+          </div>
+
+          <div className="bg-white shadow-md rounded-lg p-6 mt-4">
+            {/* <h3 className="text-lg font-bold text-center mb-3">
+              Urgent items needed now:
+            </h3> */}
+            <h3 className="text-lg font-bold text-center mb-3">
+              Urgently Need Now
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              <span className="bg-red-50 px-4 py-2 rounded-full">Fishing Equipment</span>
+              <span className="bg-red-50 px-4 py-2 rounded-full">Blankets</span>
+              <span className="bg-red-50 px-4 py-2 rounded-full">Hoodies</span>
+              <span className="bg-red-50 px-4 py-2 rounded-full">Books</span>
+              <span className="bg-red-50 px-4 py-2 rounded-full">Electronics</span>
+            </div>
+          </div>
         </div>
 
         {/* Monetary Donation Section */}
@@ -90,22 +113,22 @@ function App() {
           </h3>
           <div className="grid grid-cols-2 gap-6 mt-4">
             {/* Credit Card/Paypal - Top Left */}
-            <div className="text-center p-4 border rounded-lg">
+            <div className="bg-white text-center p-4 rounded-lg shadow-sm hover:shadow-lg transition-shadow flex flex-col items-center">
               <h3 className="text-lg font-bold">
                 Credit Card/Paypal
               </h3>
-              <a href="https://https://www.canadahelps.org/en/dn/4714" 
+              <a href="https://www.canadahelps.org/en/dn/4714" 
               className = "inline-block mt-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300"
               >Donate Now
               </a>
             </div>
 
             {/* E-Transfer - Top Right */}
-            <div className="text-center p-4 border rounded-lg">
+            <div className="bg-white text-center p-4 rounded-lg shadow-sm hover:shadow-lg transition-shadow flex flex-col items-center">
               <h3 className="text-lg font-bold">
                 E-Transfer to:
               </h3>
-              <p className="mt-2">Send to: <a href="mailto:cffc.aasimone@yahoo.ca"
+              <p className="mt-2 break-all">Send to: <a href="mailto:cffc.aasimone@yahoo.ca"
                   className="text-blue-600 underline hover:text-blue-800">
                     cffc.aasimone@yahoo.ca
                   </a>
@@ -113,7 +136,7 @@ function App() {
             </div>
             
             {/* Cheque - Bottom Left */}
-            <div className="text-center p-4 border rounded-lg">
+            <div className="bg-white text-center p-4 rounded-lg shadow-sm hover:shadow-lg transition-shadow flex flex-col items-center">
               <h3 className="text-lg font-bold">
                 Cheque
               </h3>
@@ -122,7 +145,7 @@ function App() {
             </div>
 
             {/* Securities/Mutual Funds - Bottom Right */}
-            <div className="text-center p-4 border rounded-lg">
+            <div className="bg-white text-center p-4 rounded-lg shadow-sm hover:shadow-lg transition-shadow flex flex-col items-center">
               <h3 className="text-lg font-bold">
                 Securities/Mutual Funds
               </h3>
@@ -138,11 +161,11 @@ function App() {
       
       
       {/* Footer Section */}  
-      <section>
-        <h3 className="text-xl font-medium py-1 text-center bg-gray-500">
-          1258 Lakeshore Rd E, Mississauga, ON L5E 1E9
-        </h3>
-      </section>
+      <footer className="bg-[#0f2b4c] text-white py-8 text-center">
+        <p className="text-lg">905-274-9239 | 1258 Lakeshore Rd E, Mississauga, ON L5E 1E9</p>
+      <p className="text-lg mt-1">cffc.aasimone@yahoo.ca</p>
+      <p className="text-sm text-gray-400 mt-4">Charitable Registration #: 118831080 RR 0001</p>
+      </footer>
     </div>
   )
 }
