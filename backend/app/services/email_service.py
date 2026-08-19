@@ -1,4 +1,5 @@
 import os
+import json
 from dotenv import load_dotenv
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
@@ -20,9 +21,26 @@ def send_email(receiver_email: str, subject: str, content: str):
         response=sg.send(message)
         print(response.status_code)
         return response.status_code
-        print(response.body)
-        print(response.headers)
     except Exception as e:
         print(e)
         print(e.body if hasattr(e, 'body') else "No body")
+        return None
+
+def content():
+    try:
+        with open("app/templates/newsletter.html", "r") as file:
+            content = file.read()
+        return content
+    except Exception as e:
+        print(e)
+        return None
+
+def subscriber_list():
+    try:
+        with open("app/data/subscribers.json", "r") as f:
+            data = json.load(f)
+            emails = data["subscribers"]
+        return emails
+    except Exception as e:
+        print (e)
         return None
