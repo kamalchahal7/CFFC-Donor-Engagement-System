@@ -14,17 +14,25 @@ function App() {
         <h3 className="text-xl font-medium text-gray-300 py-1 text-center mb-7 md:mb-0">
           Feeding the poorest of the poor in developing countries since 1983
         </h3>
-        <a href="https://www.canadahelps.org/en/dn/4714" 
-           className="relative md:absolute md:right-10 md:top-1/2 md:-translate-y-1/2 mt-4 md:mt-0 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300"
-        >Donate Now
-        </a>
+        <div className="relative md:absolute md:right-10 md:top-1/2 md:-translate-y-1/2 flex flex-row md:flex-col gap-3 justify-center mt-6 md:mt-0">
+          <button
+            onClick={() => navigator.clipboard.writeText("Help support Canadian Food for Children! Donate food, supplies, or funds to help families in need across 20+ developing countries: " + window.location.href).then(() => alert ('Link copied!'))}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300"
+          >
+            Share This Page
+          </button>
+          <a href="https://www.canadahelps.org/en/dn/4714" 
+           className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300"
+          >Donate Now
+          </a>
+        </div>
       </section>
       {/* Impact Section */}
       <section className="bg-white shadow-md rounded-lg max-w-4xl mx-auto -mt-8 py-12 px-8">
-        <h3 className="text-xl font-medium py-1 text-center">
+        <h3 className="text-xl font-medium py-1 mb-2 text-center">
           Over the last decade, we have delivered roughly:
         </h3>
-        <div className=" flex justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-x-6 md:gap-x-10">
           <div className="text-center">
             <p className="text-4xl font-bold">2,800+</p>
             <p className="text-gray-500">Shipments</p>
@@ -37,15 +45,17 @@ function App() {
             <p className="text-4xl font-bold">20+</p>
             <p className="text-gray-500">Countries</p>
           </div>
+
+          
         </div>
-        <h3 className="text-xl font-light py-1 text-center">
+        <h3 className="text-l font-light py-1 mt-3 text-center">
           Consisting of food, clothing, medical supplies, educational materials, and household goods
         </h3>
         {/* <h3 className="text-xl font-light py-1 text-center">
           These shipments would not be possible without our generous donors as:
         </h3> */}
-        <h3 className="text-xl font-medium text-green-600 font-bold py-1 text-center">
-          97% of our monetary donations go directly towards our shipments with the remaining 3% funding administrative costs.
+        <h3 className="text-xl font-medium text-green-600 font-bold mt-1 -mb-4 text-center">
+          97% of our monetary donations go directly towards our shipments, with the remaining 3% funding administrative costs
         </h3>
         {/* Change below to a interactive pie chart */}
         {/* <p className="text-xl font-medium py-1 text-center">
@@ -70,7 +80,7 @@ function App() {
       <section className="flex flex-col md:flex-row gap-8 px-8 py-6 md:py-10 max-w-6xl mx-auto">
         <div className="flex-1">
           <h3 className="text-xl font-medium py-1 text-center">
-            We are currently in need of the following items:
+            We are in need of the following items:
           </h3>
           {/* What's Needed Section */}
           <div className="bg-white shadow-md rounded-lg p-6 mt-4">
@@ -108,10 +118,10 @@ function App() {
 
         {/* Monetary Donation Section */}
         <div className="flex-1">
-          <h3 className="text-xl font-medium py-1 text-center">
-            You can also support us through monetary donations via the following methods:
+          <h3 className="text-xl font-medium py-1 -mt-2 md:-mt-0 text-center">
+            You can also support us through monetary donations:
           </h3>
-          <div className="grid grid-cols-2 gap-6 mt-4">
+          <div className="grid md:grid-cols-2 gap-6 mt-4">
             {/* Credit Card/Paypal - Top Left */}
             <div className="bg-white text-center p-4 rounded-lg shadow-sm hover:shadow-lg transition-shadow flex flex-col items-center">
               <h3 className="text-lg font-bold">
@@ -128,8 +138,8 @@ function App() {
               <h3 className="text-lg font-bold">
                 E-Transfer to:
               </h3>
-              <p className="mt-2 break-all">Send to: <a href="mailto:cffc.aasimone@yahoo.ca"
-                  className="text-blue-600 underline hover:text-blue-800">
+              <p className="mt-2 break-all"><a href="mailto:cffc.aasimone@yahoo.ca"
+                  className="text-blue-600 text-lg underline hover:text-blue-800">
                     cffc.aasimone@yahoo.ca
                   </a>
               </p>
@@ -140,17 +150,17 @@ function App() {
               <h3 className="text-lg font-bold">
                 Cheque
               </h3>
-              <p>Payable to Canadian Food for Children</p>
-              <p>Address: 1258 Lakeshore Rd E, Mississauga, ON L5E 1E9</p>
+              <p className="mt-2">Payable to Canadian Food for Children</p>
+              <p className="text-gray-500 text-sm">Address: 1258 Lakeshore Rd E, Mississauga, ON L5E 1E9</p>
             </div>
 
             {/* Securities/Mutual Funds - Bottom Right */}
             <div className="bg-white text-center p-4 rounded-lg shadow-sm hover:shadow-lg transition-shadow flex flex-col items-center">
               <h3 className="text-lg font-bold">
-                Securities/Mutual Funds
+                Securities or Mutual Funds
               </h3>
               <a href="https://www.canadahelps.org/en/dn/45754" 
-                className = "inline-block mt-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300"
+                className = "inline-block mt-2 bg-violet-500 hover:bg-violet-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300"
                 >Donate Now
               </a>
             </div>
