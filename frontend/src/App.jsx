@@ -30,7 +30,7 @@ function App() {
       {/* Impact Section */}
       <section className="bg-white shadow-md rounded-lg max-w-4xl mx-auto -mt-8 py-12 px-8">
         <h3 className="text-xl font-medium py-1 mb-2 text-center">
-          Over the last decade, we have delivered roughly:
+          Over the last decade, we have delivered:
         </h3>
         <div className="flex flex-wrap justify-center gap-x-6 md:gap-x-10">
           <div className="text-center">
@@ -48,8 +48,8 @@ function App() {
 
           
         </div>
-        <h3 className="text-l font-light py-1 mt-3 text-center">
-          Consisting of food, clothing, medical supplies, educational materials, and household goods
+        <h3 className="text-l font-light py-1 mt-2 text-center">
+          Including food, clothing, medical supplies, educational materials, and household goods
         </h3>
         {/* <h3 className="text-xl font-light py-1 text-center">
           These shipments would not be possible without our generous donors as:
@@ -80,7 +80,7 @@ function App() {
       <section className="flex flex-col md:flex-row gap-8 px-8 py-6 md:py-10 max-w-6xl mx-auto">
         <div className="flex-1">
           <h3 className="text-xl font-medium py-1 text-center">
-            We are in need of the following items:
+            Kindly consider donating any of the following items:
           </h3>
           {/* What's Needed Section */}
           <div className="bg-white shadow-md rounded-lg p-6 mt-4">
@@ -88,7 +88,7 @@ function App() {
               Stuff we always need:
             </h3> */}
             <h3 className="text-lg font-bold text-center mb-3">
-              Always Need
+              Always Needed in Any Shipment
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
               <span className="bg-gray-100 px-4 py-2 rounded-full">Cooking Oil</span>
@@ -104,7 +104,7 @@ function App() {
               Urgent items needed now:
             </h3> */}
             <h3 className="text-lg font-bold text-center mb-3">
-              Urgently Need Now
+              Needed for Upcoming Shipments
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
               <span className="bg-red-50 px-4 py-2 rounded-full">Fishing Equipment</span>
